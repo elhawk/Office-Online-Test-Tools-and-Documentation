@@ -75,7 +75,6 @@ server intends to integrate with. To learn more about the specific requirements 
     /files/GetShareUrl
     /files/PutUserInfo
 
-
 ..  toctree::
     :maxdepth: 2
     :glob:
