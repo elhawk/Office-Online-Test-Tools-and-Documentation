@@ -6,6 +6,7 @@
 ..  _CheckUserAccess (containers):
 
 CheckUserAccess (containers)
+============================
 
 ..  default-domain:: http
 

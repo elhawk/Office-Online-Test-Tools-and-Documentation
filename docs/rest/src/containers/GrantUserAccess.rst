@@ -6,6 +6,7 @@
 ..  _GrantUserAccess (containers):
 
 GrantUserAccess (containers)
+============================
 
 ..  default-domain:: http
 

@@ -74,6 +74,10 @@ server intends to integrate with. To learn more about the specific requirements 
     /files/EnumerateAncestors
     /files/GetShareUrl
     /files/PutUserInfo
+    /files/AddActivities
+    /files/GetActivities
+    /files/CheckUserAccess
+    /files/GrantUserAccess
 
 ..  toctree::
     :maxdepth: 2
@@ -89,6 +93,8 @@ server intends to integrate with. To learn more about the specific requirements 
     /containers/EnumerateChildren
     /containers/GetShareUrl
     /containers/RenameContainer
+    /containers/CheckUserAccess
+    /containers/GrantUserAccess
 
 
 ..  toctree::
@@ -102,6 +108,8 @@ server intends to integrate with. To learn more about the specific requirements 
     /containers/GetEcosystem
     /ecosystem/GetFileWopiSrc
     /ecosystem/GetRootContainer
+    /ecosystem/GetPeople
+    /ecosystem/SearchPeople
 
 
 ..  toctree::
