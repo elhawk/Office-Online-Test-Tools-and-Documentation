@@ -45,7 +45,7 @@ SkipToken
     on subsequent GetActivities requests for paging. Optional.
 
 TypeFilter
-    An **array** of **strings** listing the activity types the client wants.  Optional.
+    An **array** of strings listing the activity types the client wants.  Optional.
 
     ..  note:: If hosts do not support filtering, return all activity types.  If the client does not provide a filter, return all activity types.  If some of the requested types are not understood by the host, return the ones that are understood.
 
@@ -55,7 +55,7 @@ Response
 The response for an |operation| call is JSON (as specified in :rfc:`4627`) containing the following properties:
 
 Activities
-    An **array** of **objects** representing the returned activities.
+    An **array** of objects representing the returned activities.
 
 ItemsExceedTop
     A **Boolean** indicating whether there are more activities matching the filter than were returned.

@@ -102,7 +102,7 @@ ParentAuthor
     A person **object** representing the author of the comment this comment is replying to, if applicable.  Optional.
 
 Participants
-    An **array** of person **objects** representing all the participants in the comment thread, if applicable.  Optional.
+    An **array** of person objects representing all the participants in the comment thread, if applicable.  Optional.
 
 ContentAction
     A **string** with value "created", "updated", or "deleted".
@@ -113,7 +113,7 @@ Mention Activity
 A mention activity has the following key/value pairs in its data object:
 
 Mentionees
-    An **array** of person **objects** representing the people mentioned.
+    An **array** of person objects representing the people mentioned.
 
 ContentAction
     A **string** with value "created", "updated", or "deleted".
@@ -124,7 +124,7 @@ Response
 The response for an |operation| call is JSON (as specified in :rfc:`4627`) containing a single required property:
 
 ActivityResponses
-    An **array** of **objects** with the status of each added activity.
+    An **array** of objects with the status of each added activity.
 
 ActivityResponse Object
 -----------------------
