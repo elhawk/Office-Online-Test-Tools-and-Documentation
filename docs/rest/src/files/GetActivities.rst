@@ -55,7 +55,7 @@ Response
 The response for an |operation| call is JSON (as specified in :rfc:`4627`) containing the following properties:
 
 Activities
-    An **array** of objects representing the returned activities.
+    An **array** of objects representing the returned activities, defined below.
 
 ItemsExceedTop
     A **Boolean** indicating whether there are more activities matching the filter than were returned.
@@ -66,10 +66,6 @@ SkipToken
 HostActivityViewUrl
     A **string** url to the host's activity view page, if it has one.  Optional.
 
-Activity Object
----------------
+..  include:: /_fragments/activities/activity_object.rst
 
-The activity objects returned by this response are the same as those defined in :ref:`AddActivities`, with one additional property:
-
-Creator
-    A person **object**, as defined in :ref:`AddActivities`, representing the creator of the activity.
+For more on the activity types and type-specific data, see :ref:`AddActivities`

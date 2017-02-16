@@ -1,32 +1,25 @@
 
-..  index:: WOPI requests; SearchPeople (ecosystem), SearchPeople (ecosystem)
+..  index:: WOPI requests; SearchPeople, SearchPeople
 
 ..  |operation| replace:: SearchPeople
 
-..  _SearchPeople (ecosystem):
 ..  _SearchPeople:
 
-SearchPeople (ecosystem)
-============================
-
-:Required for: |ios|
+SearchPeople
+============
 
 ..  default-domain:: http
 
-..  get:: /wopi/ecosystem/root_container_pointer
+..  post:: /wopi/ecosystem
 
-    The |operation| operation returns the :term:`root container`. A WOPI client can use this operation to get a
-    reference to the root container, from which the client can call :ref:`EnumerateChildren` to navigate a container
-    hierarchy.
+    The |operation| operation returns a list of people related to the requesting user, possibly filtered to match a search term.
 
-    ..  include:: /_fragments/bootstrapper/shortcut_seealso.rst
-
-
-    ..  include:: /_fragments/access_token_param.rst
+    :reqheader X-WOPI-Override:
+        The **string** ``SEARCH_PEOPLE``. Required.
 
     :code 200: Success
+    :code 400: Couldn't deserialize request
     :code 401: Invalid :term:`access token`
-    :code 404: Resource not found/user unauthorized
     :code 500: Server error
     :code 501: Operation not supported
 
