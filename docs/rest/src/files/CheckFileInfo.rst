@@ -212,6 +212,14 @@ WOPI implementation meets the requirements for a particular property.
 
         ..  versionadded:: 2015.08.03
 
+    SupportsAddActivities
+        A **Boolean** value that indicates that the host supports the :ref:`AddActivities` operation.
+
+    SupportsGetActivities
+        A **Boolean** value that indicates that the host supports the :ref:`GetActivities` operation.
+
+    SupportedActivityTypes
+        An **array** of **strings** representing the activity types understood by the host.
 
 ..  _User metadata properties:
 
