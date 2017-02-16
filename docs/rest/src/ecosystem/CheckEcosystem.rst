@@ -39,4 +39,7 @@ Optional response properties
 SupportsContainers
     Should match the :term:`SupportsContainers` property in :ref:`CheckFileInfo`.
 
+SupportsPeople
+   Should match the :term:`SupportsPeople` property in :ref:`CheckFileInfo`.
+
 ..  note:: Since all properties in the |operation| response are optional, an empty JSON response is valid.

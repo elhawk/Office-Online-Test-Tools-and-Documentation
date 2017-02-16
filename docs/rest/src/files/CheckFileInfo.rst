@@ -171,6 +171,12 @@ WOPI implementation meets the requirements for a particular property.
         * :ref:`GetFileWopiSrc`
         * :ref:`GetRootContainer`
 
+    SupportsPeople
+        A **Boolean** value that indicates that the host supports the following WOPI operations:
+
+        * :ref:`GetPeople`
+        * :ref:`SearchPeople`
+
     SupportsExtendedLockLength
         A **Boolean** value that indicates that the host supports lock IDs up to 1024 ASCII characters long. If not
         provided, WOPI clients will assume that lock IDs are limited to 256 ASCII characters.
