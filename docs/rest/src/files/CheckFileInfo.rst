@@ -476,6 +476,10 @@ Other miscellaneous properties
             the default value is appropriate and set it accordingly if not. See the :ref:`RenameFile` operation for
             more details.
 
+    HostName
+         A **string**, provided by the host, used to identify it. This property is used to identify users belonging to a host
+         in the :ref:`SearchPeople` operation.
+
     LastModifiedTime
         A **string** that represents the last time that the file was modified. This time must always be a must be
         a :abbr:`UTC (Coordinated Universal Time)` time, and must be formatted in ISO 8601 round-trip format. For
@@ -653,9 +657,6 @@ The following properties are deprecated and should no longer be used by WOPI cli
 
     EditingCannotSave
         ..  deprecated:: 2014.06.01
-
-    HostName
-        ..  deprecated:: 2016.01.12
 
     PrivacyUrl
         ..  deprecated:: 2015.06.01
