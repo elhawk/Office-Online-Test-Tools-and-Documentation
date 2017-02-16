@@ -1,68 +1,51 @@
 
-..  index:: WOPI requests; GetPeople (ecosystem), GetPeople (ecosystem)
+..  index:: WOPI requests; GetPeople, GetPeople
 
 ..  |operation| replace:: GetPeople
 
-..  _GetPeople (ecosystem):
 ..  _GetPeople:
 
-GetPeople (ecosystem)
-============================
-
-:Required for: |ios|
+GetPeople
+=========
 
 ..  default-domain:: http
 
-..  get:: /wopi/ecosystem/root_container_pointer
+..  post:: /wopi/ecosystem
 
-    The |operation| operation returns the :term:`root container`. A WOPI client can use this operation to get a
-    reference to the root container, from which the client can call :ref:`EnumerateChildren` to navigate a container
-    hierarchy.
+    The |operation| operation takes a list of people provider / id pairs, and returns full person information for them.
 
-    ..  include:: /_fragments/bootstrapper/shortcut_seealso.rst
+    ..  note::
+        When the host cannot find one or more of the people in the request, it should simply not return a person
+        for that provider / id in the response.  The request should still return Success.
 
-
-    ..  include:: /_fragments/access_token_param.rst
+    :reqheader X-WOPI-Override:
+        The **string** ``GET_PEOPLE``. Required.
 
     :code 200: Success
+    :code 400: Couldn't deserialize request
     :code 401: Invalid :term:`access token`
-    :code 404: Resource not found/user unauthorized
     :code 500: Server error
     :code 501: Operation not supported
 
     ..  include:: /_fragments/common_headers.rst
 
+Request
+-------
+
+The request for an |operation| call is JSON (as specified in :rfc:`4627`) containing the following properties:
+
+People
+    An **array** of objects.  Each object contains a person provider and a person Id.
+
+Provider / Id Object
+~~~~~~~~~~~~~~~~~~~~
+
+..  include:: /_fragments/person_provider_id.rst
+
 Response
 --------
 
-..  include:: /_fragments/json_response.rst
+People
+    An **array** of person objects.
 
-
-Required response properties
-----------------------------
-
-The following properties must be present in all |operation| responses:
-
-
-ContainerPointer
-~~~~~~~~~~~~~~~~
-
-A JSON-formatted object containing the following properties:
-
-..  include:: /_fragments/container_pointer.rst
-
-
-Other response properties
--------------------------
-
-ContainerInfo
-~~~~~~~~~~~~~
-
-..  include:: /_fragments/container_info.rst
-
-
-Sample response
----------------
-
-..  literalinclude:: /_fragments/responses/container_pointer_and_info.json
-    :language: JSON
+..  include:: /_fragments/person_object.rst
