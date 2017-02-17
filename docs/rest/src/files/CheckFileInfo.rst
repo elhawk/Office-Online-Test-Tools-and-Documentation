@@ -134,6 +134,12 @@ WOPI implementation meets the requirements for a particular property.
         ReadWrite
             This type of Share URL allows users to both view and edit the file using the URL.
 
+    SupportedActivityTypes
+        An **array** of strings representing the activity types understood by the host.
+
+    SupportsAddActivities
+        A **Boolean** value that indicates that the host supports the :ref:`AddActivities` operation.
+
     SupportsCobalt
         A **Boolean** value that indicates that the host supports the following WOPI
         operations:
@@ -171,12 +177,6 @@ WOPI implementation meets the requirements for a particular property.
         * :ref:`GetFileWopiSrc`
         * :ref:`GetRootContainer`
 
-    SupportsPeople
-        A **Boolean** value that indicates that the host supports the following WOPI operations:
-
-        * :ref:`GetPeople`
-        * :ref:`SearchPeople`
-
     SupportsExtendedLockLength
         A **Boolean** value that indicates that the host supports lock IDs up to 1024 ASCII characters long. If not
         provided, WOPI clients will assume that lock IDs are limited to 256 ASCII characters.
@@ -193,8 +193,17 @@ WOPI implementation meets the requirements for a particular property.
         * :ref:`EnumerateChildren (folders)`
         * :ref:`DeleteFile`
 
+    SupportsGetActivities
+        A **Boolean** value that indicates that the host supports the :ref:`GetActivities` operation.
+
     SupportsGetLock
         A **Boolean** value that indicates that the host supports the :ref:`GetLock` operation.
+
+    SupportsGrantAccess
+        A **Boolean** value that indicates that the host supports the following WOPI operations:
+
+        * :ref:`CheckUserAccess`
+        * :ref:`GrantUserAccess`
 
     SupportsLocks
         A **Boolean** value that indicates that the host supports the following WOPI operations:
@@ -203,6 +212,12 @@ WOPI implementation meets the requirements for a particular property.
         * :ref:`Unlock`
         * :ref:`RefreshLock`
         * :ref:`UnlockAndRelock` operations for this file.
+
+    SupportsPeople
+        A **Boolean** value that indicates that the host supports the following WOPI operations:
+
+        * :ref:`GetPeople`
+        * :ref:`SearchPeople`
 
     SupportsRename
         A **Boolean** value that indicates that the host supports the :ref:`RenameFile` operation.
@@ -217,15 +232,6 @@ WOPI implementation meets the requirements for a particular property.
         A **Boolean** value that indicates that the host supports the :ref:`PutUserInfo` operation.
 
         ..  versionadded:: 2015.08.03
-
-    SupportsAddActivities
-        A **Boolean** value that indicates that the host supports the :ref:`AddActivities` operation.
-
-    SupportsGetActivities
-        A **Boolean** value that indicates that the host supports the :ref:`GetActivities` operation.
-
-    SupportedActivityTypes
-        An **array** of strings representing the activity types understood by the host.
 
 ..  _User metadata properties:
 
