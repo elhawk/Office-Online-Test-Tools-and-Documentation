@@ -18,6 +18,8 @@ GetPeople
         When the host cannot find one or more of the people in the request, it should simply not return a person
         for that provider / id in the response.  The request should still return Success.
 
+    ..  include:: /_fragments/access_token_param.rst
+
     :reqheader X-WOPI-Override:
         The **string** ``GET_PEOPLE``. Required.
 

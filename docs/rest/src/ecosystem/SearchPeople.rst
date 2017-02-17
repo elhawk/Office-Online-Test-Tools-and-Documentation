@@ -18,6 +18,8 @@ SearchPeople
         To improve the user experience, hosts can optionally order the people returned to return relevant contacts earlier in the list.
         This can enable a user's most frequent contacts to be displayed first in an @mention people picker dropdown, for instance.
 
+    ..  include:: /_fragments/access_token_param.rst
+
     :reqheader X-WOPI-Override:
         The **string** ``SEARCH_PEOPLE``. Required.
 
