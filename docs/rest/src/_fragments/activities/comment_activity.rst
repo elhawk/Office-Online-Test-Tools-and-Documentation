@@ -12,5 +12,4 @@ ParentAuthor
 Participants
     An **array** of person objects representing all the participants in the comment thread, if applicable.  Optional.
 
-ContentAction
-    A **string** with value "created", "updated", or "deleted".
+..  include:: /_fragments/activities/common_content_data.rst

@@ -51,6 +51,14 @@ In the latter case, we might not have any information but the user's name.  Clie
 
 ..  include:: /_fragments/person_object.rst
 
+Sample request
+~~~~~~~~~~~~~~
+
+A sample request consisting of two comments (one of which is a reply) and a mention is below.
+
+..  literalinclude:: /_fragments/activities/AddActivitiesRequest.json
+    :language: JSON
+
 Response
 --------
 
@@ -76,3 +84,10 @@ Status
 
 Message
     A **string** which the client can log. Optional.
+
+Sample response
+~~~~~~~~~~~~~~~
+A sample response to the sample request.  The server failed the mention activity because it does not support the mention type.  The comment activities succeeded.
+
+..  literalinclude:: /_fragments/activities/AddActivitiesResponse.json
+    :language: JSON

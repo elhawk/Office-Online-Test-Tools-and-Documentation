@@ -1,0 +1,17 @@
+{
+  "ActivityResponses": [
+    {
+      "Id": "c78a66-6992-4814-809b-7ec9aa0db1",
+      "Status": 2,
+      "Message": "Type not understood"
+    },
+    {
+      "Id": "d9e36d38-e439-41df-973c-50fe7e5f6213",
+      "Status": 0
+    },
+    {
+      "Id": "1a3efa0b-8700-493e-b2a3-c5da5c8c7d5e",
+      "Status": 0
+    }
+  ]
+}

@@ -11,16 +11,15 @@ Type
     * mention
 
 Id
-    A **string** identifying the activity uniquely within the upload batch
+    A UUID (universally unique identifier), represented as a **string** in the standard format described in :rfc:`4122` section 3.
+    That is, it is a string of the form XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX, where X denotes a hexadecimal digit.
+
+    WOPI clients should prefer lower case characters for hexadecimal values “a” through “f”.
+    However, as described in :rfc:`4122`, WOPI hosts must parse the UUID string in a case-insensitive way.
 
 Created
     A **string** that represents the time the activity happens.  The time must be a UTC time, formatted in ISO 8601 round-trip format.
     For example, ``"2009-06-15T13:45:30.0000000Z"``.
-
-AnchorId
-    A **string** that represents the location of the content the activity is based on within the document.  Optional.  When present,
-    the WOPI server can append this to the url in the notification using the TODO document and link to placeholder value.
-
 
 Creator
     A person **object** representing the activity creator.  Optional.
