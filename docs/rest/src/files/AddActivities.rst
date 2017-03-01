@@ -81,6 +81,7 @@ Status
     * 0 - Success
     * 1 - RetryableFailure
     * 2 - PermanentFailure
+    * 3 - UnknownType
 
 Message
     A **string** which the client can log. Optional.
