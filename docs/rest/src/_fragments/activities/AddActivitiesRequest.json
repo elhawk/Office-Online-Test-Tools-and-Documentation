@@ -1,54 +1,7 @@
 {
   "Activities": [
-    {
-      "Type": "mention",
-      "Id": "c78a66-6992-4814-809b-7ec9aa0db1",
-      "Created": "2017-02-15T13:45:10.0000000Z",
-      "Data": {
-        "Mentionees": [
-          {
-            "Name": "John Smith",
-            "Email": "john@contoso.com",
-            "Id": "123123123",
-            "Provider": "wopi-contoso"
-          }
-        ],
-        "ContentId": "875ee1f6",
-        "NavigationId": "31a91946",
-        "ContentAction": "created"
-      }
-    },
-    {
-      "Type": "comment",
-      "Id": "d9e36d38-e439-41df-973c-50fe7e5f6213",
-      "Created": "2017-02-15T13:45:30.0000000Z",
-      "Data": {
-        "CommentText": "@John Smith, could you verify these numbers?",
-        "ParentAuthor": {
-          "Name": "Jane Doe",
-          "Email": "jane@contoso.com",
-          "Id": "123456789",
-          "Provider": "wopi-contoso"
-        },
-        "Participants": [
-          {
-            "Name": "Jane Doe",
-            "Email": "jane@contoso.com",
-            "Id": "123456789",
-            "Provider": "wopi-contoso"
-          },
-          {
-            "Name": "Alice Johnson",
-            "Email": "alice@contoso.com",
-            "Id": "987654321",
-            "Provider": "wopi-contoso"
-          }
-        ],
-        "ContentId": "1095fd8a",
-        "NavigationId": "31a91946",
-        "ContentAction": "created"
-      }
-    },
+
+    // This activity is a simple comment
     {
       "Type": "comment",
       "Id": "1a3efa0b-8700-493e-b2a3-c5da5c8c7d5e",
@@ -59,6 +12,69 @@
         "NavigationId": "555f96d3",
         "ContentAction": "created"
       }
+    },
+
+    // This activity is a comment that is a reply to a thread and includes a mention
+    {
+      "Type": "comment",
+      "Id": "d9e36d38-e439-41df-973c-50fe7e5f6213",
+      "Created": "2017-02-15T13:45:30.0000000Z",
+      "Data": {
+        "CommentText": "@John Smith, could you verify these numbers?",
+        "ContentId": "1095fd8a",
+        "NavigationId": "31a91946",
+        "ContentAction": "created"
+      },
+      "People": [
+        {
+          "Name": "Jane Doe",
+          "Email": "jane@contoso.com",
+          "Id": "123456789",
+          "Provider": "wopi-contoso",
+
+          "InThread": true,
+          "RepliedTo": true
+        },
+        {
+          "Name": "Alice Johnson",
+          "Email": "alice@contoso.com",
+          "Id": "987654321",
+          "Provider": "wopi-contoso",
+
+          "InThread": true
+        },
+        {
+          "Name": "John Smith",
+          "Email": "john@contoso.com",
+          "Id": "123123123",
+          "Provider": "wopi-contoso",
+
+          "Mentioned": true
+        }
+      ]
+    },
+
+    // This activity is a POSSIBLE way to handle a mention in the body of the document
+    {
+      "Type": "edit",
+      "Id": "c78a6655-6992-4814-809b-7ec9aa0db1",
+      "Created": "2017-02-15T13:55:07.0000000Z",
+      "Data": {
+        "ContentId": "1234abcd",
+        "NavigationId": "55555555",
+        "ContentAction": "created"
+      },
+      "People": [
+        {
+          "Name": "John Smith",
+          "Email": "john@contoso.com",
+          "Id": "123123123",
+          "Provider": "wopi-contoso",
+
+          "Mentioned": true
+        }
+      ]
     }
+
   ]
 }
