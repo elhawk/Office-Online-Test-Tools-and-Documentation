@@ -53,7 +53,7 @@ In the latter case, we might not have any information but the user's name.  Clie
 Sample request
 ~~~~~~~~~~~~~~
 
-A sample request consisting of two comments (one of which is a reply) and a mention is below.
+Here is a sample request consisting of three activities: one simple comment, one comment reply that includes a mention, and a mention in the body of the document:
 
 ..  literalinclude:: /_fragments/activities/AddActivitiesRequest.json
     :language: JSON

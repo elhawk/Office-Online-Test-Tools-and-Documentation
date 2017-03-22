@@ -46,25 +46,16 @@ UserCanRead
 UserCanWrite
     A **Boolean** corresponding to what we would like :ref:`CheckFileInfo` to return for :term:`UserCanWrite` when called for the User in the request.  Optional.
 
-RestrictedWebViewOnly
-    A **Boolean** corresponding to what we would like :ref:`CheckFileInfo` to return for :term:`RestrictedWebViewOnly` when called for the User in the request.  Optional.
-
-UserCanAttend
-    A **Boolean** corresponding to what we would like :ref:`CheckFileInfo` to return for :term:`UserCanAttend` when called for the User in the request.  Optional.
-
-UserCanNotWriteRelative
-    A **Boolean** corresponding to what we would like :ref:`CheckFileInfo` to return for :term:`UserCanNotWriteRelative` when called for the User in the request.  Optional.
-
-UserCanPresent
-    A **Boolean** corresponding to what we would like :ref:`CheckFileInfo` to return for :term:`UserCanPresent` when called for the User in the request.  Optional.
-
-UserCanRename
-    A **Boolean** corresponding to what we would like :ref:`CheckFileInfo` to return for :term:`UserCanRename` when called for the User in the request.  Optional.
-
-WebEditingDisabled
-    A **Boolean** corresponding to what we would like :ref:`CheckFileInfo` to return for :term:`WebEditingDisabled` when called for the User in the request.  Optional.
-
 Provider / Id Object
 ~~~~~~~~~~~~~~~~~~~~
 
 ..  include:: /_fragments/person_provider_id.rst
+
+Sample request
+~~~~~~~~~~~~~~
+
+A sample request to grant read and write access to a user:
+
+..  literalinclude:: /_fragments/activities/GrantUserAccessRequest.json
+    :language: JSON
+

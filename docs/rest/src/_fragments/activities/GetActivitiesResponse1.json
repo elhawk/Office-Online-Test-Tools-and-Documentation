@@ -1,0 +1,45 @@
+{
+  "ItemsExceedTop": true,
+  "SkipToken": "something-arbitrary",
+
+  "Activities": [
+    {
+      "Type": "comment",
+      "Id": "d9e36d38-e439-41df-973c-50fe7e5f6213",
+      "Created": "2017-03-15T13:45:30.0000000Z",
+      "Data": {
+        "CommentText": "@John Smith, could you verify these numbers?",
+        "ContentId": "1095fd8a",
+        "NavigationId": "31a91946",
+        "ContentAction": "created"
+      },
+      "People": [
+        {
+          "Name": "Jane Doe",
+          "Email": "jane@contoso.com",
+          "Id": "123456789",
+          "Provider": "wopi-contoso",
+
+          "InThread": true,
+          "RepliedTo": true
+        },
+        {
+          "Name": "John Smith",
+          "Email": "john@contoso.com",
+          "Id": "123123123",
+          "Provider": "wopi-contoso",
+
+          "Mentioned": true
+        },
+        {
+          "Name": "Timmy Tom",
+          "Email": "timmyt@contoso.com",
+          "Id": "789",
+          "Provider": "wopi-contoso",
+
+          "Author": true
+        }
+      ]
+    }
+  ]
+}

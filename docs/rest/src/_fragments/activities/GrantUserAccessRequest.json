@@ -1,0 +1,9 @@
+{
+    "User": {
+        "Id": "123456789",
+        "Provider": "wopi-contoso"
+    },
+
+    "UserCanRead": true,
+    "UserCanWrite": true
+}

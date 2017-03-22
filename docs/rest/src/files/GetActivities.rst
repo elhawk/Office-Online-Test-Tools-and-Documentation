@@ -69,3 +69,25 @@ HostActivityViewUrl
 ..  include:: /_fragments/activities/activity_object.rst
 
 For more on the activity types and type-specific data, see :ref:`AddActivities`
+
+Samples
+~~~~~~~~~~~~~~
+
+Sample 1
+--------
+This sample request gets the most recent activity on a file.
+
+..  literalinclude:: /_fragments/activities/GetActivitiesRequest1.json
+    :language: JSON
+..  literalinclude:: /_fragments/activities/GetActivitiesResponse1.json
+    :language: JSON
+
+Sample 2
+--------
+This sample request gets up to ten activities of types "comment" and "edit" and skipping the one returned in Sample 1 via the SkipToken.
+It returns one activity; the server does not understand the "edit" type so it ignores it without error.
+
+..  literalinclude:: /_fragments/activities/GetActivitiesRequest2.json
+    :language: JSON
+..  literalinclude:: /_fragments/activities/GetActivitiesResponse2.json
+    :language: JSON

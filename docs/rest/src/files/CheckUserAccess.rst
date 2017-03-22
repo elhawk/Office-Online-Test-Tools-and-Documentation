@@ -44,20 +44,10 @@ UserCanRead
 UserCanWrite
     A **Boolean** corresponding to what :ref:`CheckFileInfo` would return for :term:`UserCanWrite` when called for the User in the request.  Required.
 
-RestrictedWebViewOnly
-    A **Boolean** corresponding to what :ref:`CheckFileInfo` would return for :term:`RestrictedWebViewOnly` when called for the User in the request.  Optional.
+Sample response
+~~~~~~~~~~~~~~
 
-UserCanAttend
-    A **Boolean** corresponding to what :ref:`CheckFileInfo` would return for :term:`UserCanAttend` when called for the User in the request.  Optional.
+A sample response describing a user's current permissions on this file:
 
-UserCanNotWriteRelative
-    A **Boolean** corresponding to what :ref:`CheckFileInfo` would return for :term:`UserCanNotWriteRelative` when called for the User in the request.  Optional.
-
-UserCanPresent
-    A **Boolean** corresponding to what :ref:`CheckFileInfo` would return for :term:`UserCanPresent` when called for the User in the request.  Optional.
-
-UserCanRename
-    A **Boolean** corresponding to what :ref:`CheckFileInfo` would return for :term:`UserCanRename` when called for the User in the request.  Optional.
-
-WebEditingDisabled
-    A **Boolean** corresponding to what :ref:`CheckFileInfo` would return for :term:`WebEditingDisabled` when called for the User in the request.  Optional.
+..  literalinclude:: /_fragments/activities/CheckUserAccessResponse.json
+    :language: JSON

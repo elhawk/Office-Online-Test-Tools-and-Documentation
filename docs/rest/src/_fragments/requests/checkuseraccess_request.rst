@@ -10,3 +10,11 @@ Provider / Id Object
 ~~~~~~~~~~~~~~~~~~~~
 
 ..  include:: /_fragments/person_provider_id.rst
+
+Sample request
+~~~~~~~~~~~~~~
+
+A sample request to check a user's permissions on this file:
+
+..  literalinclude:: /_fragments/activities/CheckUserAccessRequest.json
+    :language: JSON
