@@ -18,8 +18,8 @@ Id
     WOPI clients should prefer lower case characters for hexadecimal values “a” through “f”.
     However, as described in :rfc:`4122`, WOPI hosts must parse the UUID string in a case-insensitive way.
 
-Created
-    A **string** that represents the time the activity happens.  The time must be a UTC time, formatted in ISO 8601 round-trip format.
+Timestamp
+    A **string** that represents the time the activity happened.  The time must be a UTC time, formatted in ISO 8601 round-trip format.
     For example, ``"2009-06-15T13:45:30.0000000Z"``.
 
 People

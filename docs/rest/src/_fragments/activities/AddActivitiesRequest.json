@@ -4,7 +4,7 @@
     {
       "Type": "comment",
       "Id": "1a3efa0b-8700-493e-b2a3-c5da5c8c7d5e",
-      "Created": "2017-03-15T13:47:13000000Z",
+      "Timestamp": "2017-03-15T13:47:13000000Z",
       "Data": {
         "CommentText": "Could you rewrite this paragraph to be more clear please?",
         "ContentId": "1269bac6",
@@ -16,7 +16,7 @@
     {
       "Type": "comment",
       "Id": "d9e36d38-e439-41df-973c-50fe7e5f6213",
-      "Created": "2017-02-15T13:45:30.0000000Z",
+      "Timestamp": "2017-02-15T13:45:30.0000000Z",
       "Data": {
         "CommentText": "@John Smith, could you verify these numbers?",
         "ContentId": "1095fd8a",
@@ -52,7 +52,7 @@
     {
       "Type": "edit",
       "Id": "c78a6655-6992-4814-809b-7ec9aa0db1",
-      "Created": "2017-02-15T13:55:07.0000000Z",
+      "Timestamp": "2017-02-15T13:55:07.0000000Z",
       "Data": {
         "ContentId": "1234abcd",
         "NavigationId": "55555555",
