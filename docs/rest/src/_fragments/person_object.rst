@@ -6,9 +6,6 @@ A person has the following properties.
 Name
     A **string** of the user's friendly name. Required. May be blank.
 
-Email
-    A **string** of the user's email. Optional.
-
 PictureUrl
     A **string** with a url to a profile picture of the user. Optional.
 
@@ -26,3 +23,6 @@ InThread
 
 RepliedTo
     A **boolean** property that indicates that this user is the parent of a piece of content that this activity is replying to.  For example, a reply in a threaded comment discussion.
+
+Creator
+    A **boolean** property that indicates that this user is the person who created the activity.  This is omitted on AddActivities calls because the host can infer this by the access token of the user sending the request.

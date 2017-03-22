@@ -26,7 +26,6 @@
       "People": [
         {
           "Name": "Jane Doe",
-          "Email": "jane@contoso.com",
           "Id": "123456789",
           "Provider": "wopi-contoso",
 
@@ -35,7 +34,6 @@
         },
         {
           "Name": "Alice Johnson",
-          "Email": "alice@contoso.com",
           "Id": "987654321",
           "Provider": "wopi-contoso",
 
@@ -43,7 +41,6 @@
         },
         {
           "Name": "John Smith",
-          "Email": "john@contoso.com",
           "Id": "123123123",
           "Provider": "wopi-contoso",
 
@@ -64,7 +61,6 @@
       "People": [
         {
           "Name": "John Smith",
-          "Email": "john@contoso.com",
           "Id": "123123123",
           "Provider": "wopi-contoso",
 

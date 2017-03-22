@@ -16,7 +16,6 @@
       "People": [
         {
           "Name": "Timmy Tom",
-          "Email": "timmyt@contoso.com",
           "Id": "789",
           "Provider": "wopi-contoso",
 
