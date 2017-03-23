@@ -19,14 +19,12 @@ GrantUserAccess
     :reqheader X-WOPI-Override:
         The **string** ``GRANT_USER_ACCESS``. Required.
 
-    :resheader X-WOPI-UserNotFound:
-        ..  include:: /_fragments/headers/X-WOPI-UserNotFound.rst
-
     :code 200: Success
     :code 400: Requested user was not found, or couldn't deserialize request
     :code 401: Invalid :term:`access token`
+    :code 403: User does not have permission to grant the requested user the requested access.
     :code 404: Resource does not exist / user unauthorized
-    :code 422: User does not have permission to grant the requested user the requested access.
+    :code 410: The user whose permissions are being modified does not exist
     :code 500: Server error
     :code 501: Operation not supported
 

@@ -19,13 +19,11 @@ CheckUserAccess
     :reqheader X-WOPI-Override:
         The **string** ``CHECK_USER_ACCESS``. Required.
 
-    :resheader X-WOPI-UserNotFound:
-        ..  include:: /_fragments/headers/X-WOPI-UserNotFound.rst
-
     :code 200: Success
     :code 400: Checked user was not found, or couldn't deserialize request
     :code 401: Invalid :term:`access token`
     :code 404: Resource does not exist / user unauthorized
+    :code 410: The user whose permissions are being checked does not exist
     :code 500: Server error
     :code 501: Operation not supported
 
