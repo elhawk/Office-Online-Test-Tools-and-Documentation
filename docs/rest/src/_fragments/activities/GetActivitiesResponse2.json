@@ -1,0 +1,27 @@
+{
+  "ItemsExceedTop": false,
+  "SkipToken": "something-else",
+
+  "Activities": [
+    {
+      "Type": "comment",
+      "Id": "1a3efa0b-8700-493e-b2a3-c5da5c8c7d5e",
+      "Timestamp": "2017-02-15T13:47:13000000Z",
+      "Data": {
+        "CommentText": "Could you rewrite this paragraph to be more clear please?",
+        "ContentId": "1269bac6",
+        "NavigationId": "555f96d3",
+        "ContentAction": "created"
+      },
+      "People": [
+        {
+          "Name": "Timmy Tom",
+          "Id": "789",
+          "Provider": "wopi-contoso",
+
+          "Author": true
+        }
+      ]
+    }
+  ]
+}

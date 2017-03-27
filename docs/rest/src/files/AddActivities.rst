@@ -22,7 +22,7 @@ AddActivities
         The **string** ``ADD_ACTIVITIES``. Required.
 
     :code 200: Success
-    :code 400: Couldn't deserialize request. Should not be returned for activities of unknown type
+    :code 400: Couldn't deserialize request. Should not be returned for activities of unknown type, even if the batch contained zero activities of known types.
     :code 401: Invalid :term:`access token`
     :code 404: Resource not found/user unauthorized
     :code 500: Server error
@@ -40,7 +40,6 @@ Activities
 
 ..  include:: /_fragments/activities/activity_object.rst
 ..  include:: /_fragments/activities/comment_activity.rst
-..  include:: /_fragments/activities/mention_activity.rst
 
 People
 ~~~~~~
@@ -54,7 +53,7 @@ In the latter case, we might not have any information but the user's name.  Clie
 Sample request
 ~~~~~~~~~~~~~~
 
-A sample request consisting of two comments (one of which is a reply) and a mention is below.
+Here is a sample request consisting of three activities: one simple comment, one comment reply that includes a mention, and a mention in the body of the document:
 
 ..  literalinclude:: /_fragments/activities/AddActivitiesRequest.json
     :language: JSON
@@ -88,7 +87,7 @@ Message
 
 Sample response
 ~~~~~~~~~~~~~~~
-A sample response to the sample request.  The server failed the mention activity because it does not support the mention type.  The comment activities succeeded.
+A sample response to the sample request.  The server failed the edit activity because it does not support the edit type.  The comment activities succeeded.
 
 ..  literalinclude:: /_fragments/activities/AddActivitiesResponse.json
     :language: JSON

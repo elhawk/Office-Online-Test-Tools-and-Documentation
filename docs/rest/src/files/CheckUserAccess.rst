@@ -19,13 +19,11 @@ CheckUserAccess
     :reqheader X-WOPI-Override:
         The **string** ``CHECK_USER_ACCESS``. Required.
 
-    :resheader X-WOPI-UserNotFound:
-        ..  include:: /_fragments/headers/X-WOPI-UserNotFound.rst
-
     :code 200: Success
     :code 400: Checked user was not found, or couldn't deserialize request
     :code 401: Invalid :term:`access token`
     :code 404: Resource does not exist / user unauthorized
+    :code 410: The user whose permissions are being checked does not exist
     :code 500: Server error
     :code 501: Operation not supported
 
@@ -44,20 +42,10 @@ UserCanRead
 UserCanWrite
     A **Boolean** corresponding to what :ref:`CheckFileInfo` would return for :term:`UserCanWrite` when called for the User in the request.  Required.
 
-RestrictedWebViewOnly
-    A **Boolean** corresponding to what :ref:`CheckFileInfo` would return for :term:`RestrictedWebViewOnly` when called for the User in the request.  Optional.
+Sample response
+~~~~~~~~~~~~~~
 
-UserCanAttend
-    A **Boolean** corresponding to what :ref:`CheckFileInfo` would return for :term:`UserCanAttend` when called for the User in the request.  Optional.
+A sample response describing a user's current permissions on this file:
 
-UserCanNotWriteRelative
-    A **Boolean** corresponding to what :ref:`CheckFileInfo` would return for :term:`UserCanNotWriteRelative` when called for the User in the request.  Optional.
-
-UserCanPresent
-    A **Boolean** corresponding to what :ref:`CheckFileInfo` would return for :term:`UserCanPresent` when called for the User in the request.  Optional.
-
-UserCanRename
-    A **Boolean** corresponding to what :ref:`CheckFileInfo` would return for :term:`UserCanRename` when called for the User in the request.  Optional.
-
-WebEditingDisabled
-    A **Boolean** corresponding to what :ref:`CheckFileInfo` would return for :term:`WebEditingDisabled` when called for the User in the request.  Optional.
+..  literalinclude:: /_fragments/activities/CheckUserAccessResponse.json
+    :language: JSON
