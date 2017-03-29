@@ -19,6 +19,7 @@
       "Timestamp": "2017-02-15T13:45:30.0000000Z",
       "Data": {
         "CommentText": "@John Smith, could you verify these numbers?",
+        "IsReply":  true,
         "ContentId": "1095fd8a",
         "NavigationId": "31a91946",
         "ContentAction": "created"

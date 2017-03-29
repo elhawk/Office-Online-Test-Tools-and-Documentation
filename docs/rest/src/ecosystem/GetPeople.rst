@@ -12,6 +12,8 @@ GetPeople
 
 ..  post:: /wopi/ecosystem
 
+    ..  include:: /_fragments/future_operation.rst
+
     The |operation| operation takes a list of people provider / id pairs, and returns full person information for them.
 
     ..  note::

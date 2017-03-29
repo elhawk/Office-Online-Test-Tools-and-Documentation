@@ -12,7 +12,9 @@ GrantUserAccess (containers)
 
 ..  post:: /wopi/containers/(container_id)
 
-    The |operation| call requests that a user be granted access to the container.
+    ..  include:: /_fragments/future_operation.rst
+
+    The |operation| call requests that a user be granted access to the container. This API is purely additive and cannot be used to revoke a user's permissions.
 
     ..  note::
         The host can decide whether to make the access grant recursive.
@@ -23,7 +25,7 @@ GrantUserAccess (containers)
         The **string** ``GRANT_USER_ACCESS``. Required.
 
     :code 200: Success
-    :code 400: Requested user was not found, or couldn't deserialize request
+    :code 400: Couldn't deserialize request
     :code 401: Invalid :term:`access token`
     :code 403: User does not have permission to grant the requested user the requested access.
     :code 404: Resource does not exist / user unauthorized
@@ -41,17 +43,17 @@ The request for an |operation| call is JSON (as specified in :rfc:`4627`) contai
 User
     An **object** representing the person we would like to grant access to, represented by a provider and Id.  Required.
 
-UserCanRead
-    A **Boolean** of whether we would like to grant the user read access to the container.  Optional.
+GrantReadAccess
+    A **Boolean** indicating the user should gain the ability to read the container.  Optional.
 
-UserCanCreateChildContainer
-    A **Boolean** corresponding to what we would like :ref:`CheckContainerInfo` to return for :term:`UserCanCreateChildContainer` when called for the User in the request.  Optional.
+GrantCreateChildContainer
+    A **Boolean** indicating the user should gain the ability to create child containers in this container, corresponding to the :term:`UserCanCreateChildContainer` property of :ref:`CheckContainerInfo`.  Optional.
 
-UserCanCreateChildFile
-    A **Boolean** corresponding to what we would like :ref:`CheckContainerInfo` to return for :term:`UserCanCreateChildFile` when called for the User in the request.  Optional.
+GrantCreateChildFile
+    A **Boolean** indicating the user should gain the ability to create child containers in this container, corresponding to the :term:`UserCanCreateChildFile` property of :ref:`CheckContainerInfo`.  Optional.
 
-UserCanDelete
-    A **Boolean** corresponding to what we would like :ref:`CheckContainerInfo` to return for :term:`UserCanDelete` when called for the User in the request.  Optional.
+GrantDeleteAccess
+    A **Boolean** indicating the user should gain the ability to create child containers in this container, corresponding to the :term:`UserCanDelete` property of :ref:`CheckContainerInfo`.  Optional.
 
 Provider / Id Object
 ~~~~~~~~~~~~~~~~~~~~

@@ -12,6 +12,8 @@ CheckUserAccess (containers)
 
 ..  post:: /wopi/containers/(container_id)
 
+    ..  include:: /_fragments/future_operation.rst
+
     The |operation| call asks what kind of access a user has to the file.
 
     ..  include:: /_fragments/common_containers_params.rst

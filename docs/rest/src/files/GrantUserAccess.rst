@@ -12,7 +12,7 @@ GrantUserAccess
 
 ..  post:: /wopi/files/(file_id)
 
-    The |operation| call requests that a user be granted access to the file.
+    The |operation| call requests that a user be granted access to the file. This API is purely additive and cannot be used to revoke a user's permissions.
 
     ..  include:: /_fragments/common_params.rst
 
@@ -20,7 +20,7 @@ GrantUserAccess
         The **string** ``GRANT_USER_ACCESS``. Required.
 
     :code 200: Success
-    :code 400: Requested user was not found, or couldn't deserialize request
+    :code 400: Couldn't deserialize request
     :code 401: Invalid :term:`access token`
     :code 403: User does not have permission to grant the requested user the requested access.
     :code 404: Resource does not exist / user unauthorized
@@ -38,11 +38,15 @@ The request for an |operation| call is JSON (as specified in :rfc:`4627`) contai
 User
     An **object** representing the person we would like to grant access to, represented by a provider and Id.  Required.
 
-UserCanRead
-    A **Boolean** of whether we would like the user to have read access to the file.  Optional.
+GrantReadAccess
+    A **Boolean** indicating the user should gain the ability to read the file.  Optional.
 
-UserCanWrite
-    A **Boolean** corresponding to what we would like :ref:`CheckFileInfo` to return for :term:`UserCanWrite` when called for the User in the request.  Optional.
+GrantWriteAccess
+    A **Boolean** indicating the user should gain the ability to write to the file, corresponding to the :term:`UserCanWrite` property of :ref:`CheckFileInfo`.  Optional.
+
+Scenario
+    A **string** that a WOPI client might include to provide more details about the reason that access is being granted. For example, a host might choose to notify a user when a file is explicitly shared with them but might not send a notification when they were granted access by being mentioned in a comment because they expect to send a notification from a corresponding :ref:`AddActivities` operation.
+    Valid values: "mention", "share". Unrecognized values should be ignored without error.
 
 Provider / Id Object
 ~~~~~~~~~~~~~~~~~~~~

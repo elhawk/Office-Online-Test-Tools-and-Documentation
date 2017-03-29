@@ -12,6 +12,8 @@ SearchPeople
 
 ..  post:: /wopi/ecosystem
 
+    ..  include:: /_fragments/future_operation.rst
+
     The |operation| operation returns a list of people related to the requesting user, possibly filtered to match a search term.
 
     ..  tip::

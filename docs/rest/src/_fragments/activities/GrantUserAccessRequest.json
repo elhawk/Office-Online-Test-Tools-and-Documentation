@@ -4,6 +4,7 @@
         "Provider": "wopi-contoso"
     },
 
-    "UserCanRead": true,
-    "UserCanWrite": true
+    "GrantReadAccess": true,
+    "GrantWriteAccess": true,
+    "Scenario": "mention"
 }

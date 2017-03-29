@@ -20,7 +20,7 @@ CheckUserAccess
         The **string** ``CHECK_USER_ACCESS``. Required.
 
     :code 200: Success
-    :code 400: Checked user was not found, or couldn't deserialize request
+    :code 400: Couldn't deserialize request
     :code 401: Invalid :term:`access token`
     :code 404: Resource does not exist / user unauthorized
     :code 410: The user whose permissions are being checked does not exist
