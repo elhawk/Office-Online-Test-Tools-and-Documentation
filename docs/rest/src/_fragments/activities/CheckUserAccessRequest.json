@@ -1,6 +1,16 @@
 {
-    "User": {
-        "Id": "123456789",
-        "Provider": "wopi-contoso"
+  "Users": [
+    {
+      "Id": "something invalid",
+      "Provider": "wopi-contoso"
+    },
+    {
+      "Id": "123456789",
+      "Provider": "wopi-contoso"
+    },
+    {
+      "Id": "123456789",
+      "Provider": "wopi-contoso"
     }
+  ]
 }
