@@ -69,7 +69,7 @@ ActivityResponses
 ActivityResponse Object
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Each ActivityResponse object has the following properties
+Each ActivityResponse object has the following properties:
 
 Id
     The **string** Id of the activity from the request batch.

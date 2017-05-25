@@ -1,0 +1,15 @@
+{
+  "GrantUserAccessResponses": [
+    {
+      "Id": "123123123",
+      "Provider": "wopi-contoso",
+      "Status": 1,
+      "Message": "User has insufficient permissions to grant other users access"
+    },
+    {
+      "Id": "987654321",
+      "Provider": "wopi-contoso",
+      "Status": 0
+    }
+  ]
+}

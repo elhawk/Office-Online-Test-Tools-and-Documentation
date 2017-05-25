@@ -1,10 +1,16 @@
 {
-    "User": {
-        "Id": "123456789",
-        "Provider": "wopi-contoso"
+  "Users": [
+    {
+      "Id": "123123123",
+      "Provider": "wopi-contoso"
     },
+    {
+      "Id": "987654321",
+      "Provider": "wopi-contoso"
+    }
+  ],
 
-    "GrantReadAccess": true,
-    "GrantWriteAccess": true,
-    "Scenario": "mention"
+  "GrantReadAccess": true,
+  "GrantWriteAccess": true,
+  "Scenario": "mention"
 }

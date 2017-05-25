@@ -1,4 +1,21 @@
 {
-	"UserCanRead": true,
-	"UserCanWrite": true
+  "CheckUserAccessResponses": [
+    {
+      "Id": "something invalid",
+      "Provider": "wopi-contoso",
+      "Status": 1,
+      "Message": "User does not exist"
+    },
+    {
+      "Id": "123456789",
+      "Provider": "wopi-contoso",
+      "UserCanRead": true,
+      "UserCanWrite": true
+    },
+    {
+      "Id": "123123123",
+      "Provider": "wopi-contoso",
+      "UserCanRead": true
+    }
+  ]
 }

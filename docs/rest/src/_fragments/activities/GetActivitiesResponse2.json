@@ -19,7 +19,7 @@
           "Id": "789",
           "Provider": "wopi-contoso",
 
-          "Author": true
+          "Creator": true
         }
       ]
     }
