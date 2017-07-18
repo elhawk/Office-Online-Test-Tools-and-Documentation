@@ -25,6 +25,7 @@ AddActivities
     :code 400: Couldn't deserialize request. Should not be returned for activities of unknown type, even if the batch contained zero activities of known types.
     :code 401: Invalid :term:`access token`
     :code 404: Resource not found/user unauthorized
+    :code 429: Too many requests, as per RFC 6585.  Hosts are encourage to set the Retry-After header too.
     :code 500: Server error
     :code 501: AddActivities is not supported
 

@@ -28,6 +28,7 @@ GetPeople
     :code 200: Success
     :code 400: Couldn't deserialize request
     :code 401: Invalid :term:`access token`
+    :code 429: Too many requests, as per RFC 6585.  Hosts are encourage to set the Retry-After header too.
     :code 500: Server error
     :code 501: Operation not supported
 

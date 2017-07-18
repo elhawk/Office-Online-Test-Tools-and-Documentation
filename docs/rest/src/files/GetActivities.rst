@@ -23,6 +23,7 @@ GetActivities
     :code 400: Couldn't deserialize request. Should not be returned for activities of unknown type, or unsupported filters.
     :code 401: Invalid :term:`access token`
     :code 404: Resource not found/user unauthorized
+    :code 429: Too many requests, as per RFC 6585.  Hosts are encourage to set the Retry-After header too.
     :code 500: Server error
     :code 501: GetActivities is not supported
 
@@ -34,11 +35,11 @@ Request
 The request for an |operation| call is JSON (as specified in :rfc:`4627`) containing the following properties:
 
 Top
-    An **integer** with the maximum number of activities we would like returned to us.  Required.
+    An **integer** with the maximum number of activities the client would like returned to us.  Required.
 
     ..  note:: Hosts should order activities most-recent first when returning the top N activities to the requesting client.
 
-    ..  note:: Hosts may define their own maximum number of activities to return in a given response.  If top exceeds this value, hosts should return their own maximum, rather than failing the request.
+    ..  note:: Hosts may define their own maximum number of activities to return in a given response.  If top exceeds this value, hosts should return their own maximum, rather than failing the request.  Hosts must not exceed the client's Top value.
 
 SkipToken
     A **string** which is opaque to the clients.  This string is returned in the GetActivities response, and can be sent
@@ -57,8 +58,8 @@ The response for an |operation| call is JSON (as specified in :rfc:`4627`) conta
 Activities
     An **array** of objects representing the returned activities, defined below.
 
-ItemsExceedTop
-    A **Boolean** indicating whether there are more activities matching the filter than were returned.
+MoreResultsExist
+    A **Boolean** indicating whether there are more activities matching the filter than were returned.  The client can send another GetActivities request and include the SkipToken value to see the next batch.
 
 SkipToken
     A **string** value which clients can send on subsequent GetActivities requests for paging.  Opaque to clients.  Optional.
