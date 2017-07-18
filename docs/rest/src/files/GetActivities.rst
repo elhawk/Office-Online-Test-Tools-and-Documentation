@@ -85,8 +85,8 @@ This sample request gets the most recent activity on a file.
 
 Sample 2
 --------
-This sample request gets up to ten activities of types "comment" and "edit" and skipping the one returned in Sample 1 via the SkipToken.
-It returns one activity; the server does not understand the "edit" type so it ignores it without error.
+This sample request gets up to ten activities of types "comment" and "somethingunknown" and skipping the one returned in Sample 1 via the SkipToken.
+It returns one activity;. The server does not understand the "somethingunknown" type so it ignores it without error.
 
 ..  literalinclude:: /_fragments/activities/GetActivitiesRequest2.json
     :language: JSON

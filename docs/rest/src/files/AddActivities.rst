@@ -54,7 +54,7 @@ In the latter case, we might not have any information but the user's name.  Clie
 Sample request
 ~~~~~~~~~~~~~~
 
-Here is a sample request consisting of three activities: one simple comment, one comment reply that includes a mention, and a mention in the body of the document:
+Here is a sample request consisting of three activities: one simple comment, one comment reply that includes a mention, and a mention in the body of the document (an activity not currently defined and only included to show general thinking about future approach):
 
 ..  literalinclude:: /_fragments/activities/AddActivitiesRequest.json
     :language: JSON
@@ -88,7 +88,7 @@ Message
 
 Sample response
 ~~~~~~~~~~~~~~~
-A sample response to the sample request.  The server failed the edit activity because it does not support the edit type.  The comment activities succeeded.
+A sample response to the sample request.  The server failed the "typedstuff" activity because it does not support that type.  The comment activities succeeded.
 
 ..  literalinclude:: /_fragments/activities/AddActivitiesResponse.json
     :language: JSON
