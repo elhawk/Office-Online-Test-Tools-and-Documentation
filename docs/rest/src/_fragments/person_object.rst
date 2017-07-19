@@ -25,4 +25,4 @@ RepliedTo
     A **boolean** property that indicates that this user is the parent of a piece of content that this activity is replying to.  For example, a reply in a threaded comment discussion.
 
 Creator
-    A **boolean** property that indicates that this user is the person who created the activity.  This is omitted on AddActivities calls because the host can infer this by the access token of the user sending the request.
+    A **boolean** property that indicates that this user is the person who created the activity.  This is omitted on AddActivities calls; the host should determine the creator via the access token used on the AddActivities request.

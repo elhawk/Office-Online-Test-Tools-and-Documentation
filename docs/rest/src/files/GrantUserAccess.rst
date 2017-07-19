@@ -23,6 +23,7 @@ GrantUserAccess
     :code 400: Couldn't deserialize request
     :code 401: Invalid :term:`access token`
     :code 404: Resource does not exist / user unauthorized
+    :code 429: Too many requests, as per RFC 6585.  Hosts are encourage to set the Retry-After header too.
     :code 500: Server error
     :code 501: Operation not supported
 
@@ -70,7 +71,7 @@ GrantUserAccessResponses
     An **array** of objects with the status of each added activity.
 
 GrantUserAccessResponse Object
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Each GrantUserAccessResponse object has the following properties:
 

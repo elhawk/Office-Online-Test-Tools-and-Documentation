@@ -37,6 +37,7 @@ GetShareUrl (files)
     :code 200: Success
     :code 401: Invalid :term:`access token`
     :code 404: Resource not found/user unauthorized
+    :code 429: Too many requests, as per RFC 6585.  Hosts are encourage to set the Retry-After header too.
     :code 500: Server error
     :code 501: Operation not supported
 

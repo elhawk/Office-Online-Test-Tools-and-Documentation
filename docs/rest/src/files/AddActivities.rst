@@ -25,6 +25,7 @@ AddActivities
     :code 400: Couldn't deserialize request. Should not be returned for activities of unknown type, even if the batch contained zero activities of known types.
     :code 401: Invalid :term:`access token`
     :code 404: Resource not found/user unauthorized
+    :code 429: Too many requests, as per RFC 6585.  Hosts are encourage to set the Retry-After header too.
     :code 500: Server error
     :code 501: AddActivities is not supported
 
@@ -40,6 +41,7 @@ Activities
 
 ..  include:: /_fragments/activities/activity_object.rst
 ..  include:: /_fragments/activities/comment_activity.rst
+..  include:: /_fragments/activities/mention_activity.rst
 
 People
 ~~~~~~
@@ -53,7 +55,7 @@ In the latter case, we might not have any information but the user's name.  Clie
 Sample request
 ~~~~~~~~~~~~~~
 
-Here is a sample request consisting of three activities: one simple comment, one comment reply that includes a mention, and a mention in the body of the document:
+Here is a sample request consisting of five activities: one simple comment, one comment reply that includes a mention, that comment's mention, a mention from outside a comment, and an activity with a type the host does not support:
 
 ..  literalinclude:: /_fragments/activities/AddActivitiesRequest.json
     :language: JSON
@@ -87,7 +89,7 @@ Message
 
 Sample response
 ~~~~~~~~~~~~~~~
-A sample response to the sample request.  The server failed the edit activity because it does not support the edit type.  The comment activities succeeded.
+A sample response to the sample request.  The server failed the "typedstuff" activity because it does not support that type.  The comment activities succeeded.
 
 ..  literalinclude:: /_fragments/activities/AddActivitiesResponse.json
     :language: JSON

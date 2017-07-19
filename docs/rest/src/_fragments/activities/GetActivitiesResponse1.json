@@ -6,7 +6,7 @@
     {
       "Type": "comment",
       "Id": "d9e36d38-e439-41df-973c-50fe7e5f6213",
-      "Timestamp": "2017-03-15T13:45:30.0000000Z",
+      "Timestamp": "2017-02-15T14:03:30.0000000Z",
       "Data": {
         "CommentText": "@John Smith, could you verify these numbers?",
         "IsReply":  true,
@@ -27,8 +27,13 @@
           "Name": "John Smith",
           "Id": "123123123",
           "Provider": "wopi-contoso",
+        },
+        {
+          "Name": "Alice Johnson",
+          "Id": "987654321",
+          "Provider": "wopi-contoso",
 
-          "Mentioned": true
+          "InThread": true
         },
         {
           "Name": "Timmy Tom",
