@@ -40,7 +40,7 @@ CheckUserAccessResponses
     An **array** of objects that describes the current permissions of each user in the request batch.
 
 CheckUserAccessResponse Object
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Each CheckUserAccessResponse object has the following properties:
 
@@ -68,7 +68,7 @@ UserCanWrite
 As usual, all properties whose value is the default (0 or false) may be omitted.  For example, the status property may be omitted when it is 0 (indicating success) and users without a particular permission do not need to explicitly return false for that property.
 
 Sample response
-~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~
 
 A sample response describing the current permissions on this file for a set of users:
 

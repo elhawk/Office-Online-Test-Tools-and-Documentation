@@ -71,7 +71,7 @@ GrantUserAccessResponses
     An **array** of objects with the status of each added activity.
 
 GrantUserAccessResponse Object
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Each GrantUserAccessResponse object has the following properties:
 
