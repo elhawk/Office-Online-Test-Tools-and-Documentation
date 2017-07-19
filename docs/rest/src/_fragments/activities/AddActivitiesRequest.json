@@ -4,7 +4,7 @@
     {
       "Type": "comment",
       "Id": "1a3efa0b-8700-493e-b2a3-c5da5c8c7d5e",
-      "Timestamp": "2017-03-15T13:47:13000000Z",
+      "Timestamp": "2017-02-15T13:47:13000000Z",
       "Data": {
         "CommentText": "Could you rewrite this paragraph to be more clear please?",
         "ContentId": "1269bac6",
@@ -16,7 +16,7 @@
     {
       "Type": "comment",
       "Id": "d9e36d38-e439-41df-973c-50fe7e5f6213",
-      "Timestamp": "2017-02-15T13:45:30.0000000Z",
+      "Timestamp": "2017-02-15T14:03:30.0000000Z",
       "Data": {
         "CommentText": "@John Smith, could you verify these numbers?",
         "IsReply":  true,
@@ -51,7 +51,47 @@
     },
 
     {
-      "Type": "typedstuff",
+      "Type": "mention",
+      "Id": "cc627773-ab65-4332-2845-5813aeef8256",
+      "Timestamp": "2017-02-15T14:03:30.0000000Z",
+      "Data": {
+        "ContentId": "9953",
+        "NavigationId": "55551132",
+        "ContentAction": "created"
+      },
+      "People": [
+        {
+          "Name": "John Smith",
+          "Id": "123123123",
+          "Provider": "wopi-contoso",
+
+          "Mentioned": true
+        }
+      ]
+    },
+
+    {
+      "Type": "mention",
+      "Id": "9000431a-77fe-43bc-a881-5531928aae63",
+      "Timestamp": "2017-02-15T12:47:02.0000000Z",
+      "Data": {
+        "ContentId": "1183",
+        "NavigationId": "692baf51",
+        "ContentAction": "created"
+      },
+      "People": [
+        {
+          "Name": "Alice Johnson",
+          "Id": "987654321",
+          "Provider": "wopi-contoso",
+
+          "Mentioned": true
+        }
+      ]
+    },
+
+    {
+      "Type": "bogustype",
       "Id": "c78a6655-6992-4814-809b-7ec9aa0db100",
       "Timestamp": "2017-02-15T13:55:07.0000000Z",
       "Data": {

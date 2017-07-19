@@ -41,6 +41,7 @@ Activities
 
 ..  include:: /_fragments/activities/activity_object.rst
 ..  include:: /_fragments/activities/comment_activity.rst
+..  include:: /_fragments/activities/mention_activity.rst
 
 People
 ~~~~~~
@@ -54,7 +55,7 @@ In the latter case, we might not have any information but the user's name.  Clie
 Sample request
 ~~~~~~~~~~~~~~
 
-Here is a sample request consisting of three activities: one simple comment, one comment reply that includes a mention, and a mention in the body of the document (an activity not currently defined and only included to show general thinking about future approach):
+Here is a sample request consisting of five activities: one simple comment, one comment reply that includes a mention, that comment's mention, a mention from outside a comment, and an activity with a type the host does not support:
 
 ..  literalinclude:: /_fragments/activities/AddActivitiesRequest.json
     :language: JSON

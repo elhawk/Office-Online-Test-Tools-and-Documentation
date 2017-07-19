@@ -73,6 +73,7 @@ For more on the activity types and type-specific data, see :ref:`AddActivities`
 
 Samples
 ~~~~~~~~~~~~~~
+These samples use the activity data sent via the example in :ref:`AddActivities`.
 
 Sample 1
 --------
@@ -85,8 +86,8 @@ This sample request gets the most recent activity on a file.
 
 Sample 2
 --------
-This sample request gets up to ten activities of types "comment" and "somethingunknown" and skipping the one returned in Sample 1 via the SkipToken.
-It returns one activity;. The server does not understand the "somethingunknown" type so it ignores it without error.
+This sample request gets up to ten activities of types "comment" and "somethingunknown" and skipping the one returned in Sample 1 by sending Sample 1's SkipToken.
+It returns one activity. The server does not understand the "somethingunknown" type so it ignores it without error.  The client did not ask for mention activities so they skipped. The server did not understand the "bogustype" activity sent in the AddActivities call so it was not saved.
 
 ..  literalinclude:: /_fragments/activities/GetActivitiesRequest2.json
     :language: JSON
